@@ -53,15 +53,15 @@ If you are using a Pantry client, you can simply replace the Pantry domain or ba
 
 ```shell
 # Create a Basket
-curl -X POST https://your-nook-url.nook.workers.dev/apiv1/pantry/your-pantry-id/basket/yourBasket \
+curl -X POST https://your-nook-url.cloudflare.workers.dev/apiv1/pantry/your-pantry-id/basket/yourBasket \
   -H "Content-Type: application/json" \
   -d '{"city": "New York"}'
 
 # Get Basket
-curl https://your-nook-url.nook.workers.dev/apiv1/pantry/your-pantry-id/basket/yourBasket
+curl https://your-nook-url.cloudflare.workers.dev/apiv1/pantry/your-pantry-id/basket/yourBasket
 
 # Update Basket
-curl -X PUT https://your-nook-url.nook.workers.dev/apiv1/pantry/your-pantry-id/basket/yourBasket \
+curl -X PUT https://your-nook-url.cloudflare.workers.dev/apiv1/pantry/your-pantry-id/basket/yourBasket \
   -H "Content-Type: application/json" \
   -d '{"state": "NY"}'
 
