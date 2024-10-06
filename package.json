@@ -1,0 +1,33 @@
+{
+	"name": "nook",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"init": "node init.js",
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"coverage": "vitest --coverage",
+		"cf-typegen": "wrangler types",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"deepmerge": "^4.3.1"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.5.2",
+		"@cloudflare/workers-types": "^4.20241004.0",
+		"@vitest/coverage-istanbul": "2.0.5",
+		"prettier": "^3.3.3",
+		"typescript": "^5.5.2",
+		"vitest": "2.0.5",
+		"wrangler": "^3.60.3"
+	},
+	"keywords": [],
+	"author": "jamsinclair <jamsinclairnz@gmail.com>",
+	"license": "CC-BY-NC-4.0",
+	"type": "module",
+	"private": true
+}

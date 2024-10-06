@@ -1,0 +1,19 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "nook-worker"
+main = "src/index.ts"
+compatibility_date = "2024-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Default basket expiration to 30 days. To disable expiration, set to 0.
+BASKET_TTL_SECONDS = 2592000
+
+# Workers Logs
+# Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+# Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
+[observability]
+enabled = true
+
+#[[kv_namespaces]]
+#binding = "<your pantry id>"
+#id = "<your KV namespace id>"
