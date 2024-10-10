@@ -70,7 +70,7 @@ curl -X PUT https://your-nook-url.cloudflare.workers.dev/apiv1/pantry/your-pantr
 
 ### Data Persistence
 
-Nook currently emulates the empheral nature of Pantry. Data is stored in Cloudflare Workers KV with a time-to-live (TTL) of 30 days. This means that data will be automatically deleted after 30 days of inactivity.
+Nook currently emulates the ephemeral nature of Pantry. Data is stored in Cloudflare Workers KV with a time-to-live (TTL) of 30 days. This means that data will be automatically deleted after 30 days of inactivity.
 
 If you need data to persist indefinitely, you can modify the `BASKET_TTL_SECONDS` value in the `wrangler.toml` file to a higher or lower value. Setting it to `0` will make data persist indefinitely.
 
