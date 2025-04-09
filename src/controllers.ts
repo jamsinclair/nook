@@ -76,7 +76,7 @@ export class BasketController {
 	async getBasket(name: string): Promise<string | null> {
 		const value = await this.store.get(name);
 
-		if (typeof value === 'string' && this.ttl) {
+		if (typeof value === 'string' && this.ttl && this.ttl > 0) {
 			// Refresh the TTL of the basket
 			await this.store.put(name, value, { expirationTtl: this.ttl });
 		}
